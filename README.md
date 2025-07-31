@@ -1,12 +1,43 @@
-# React + Vite
+# 💫 Creatorverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Creatorverse is a React + Supabase web app that lets users manage a collection of content creators. Users can add, view, edit, and delete creators, as well as visit their external channels or pages.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View all content creators  
+- View details for a single creator  
+- Add a new content creator  
+- Edit existing creator info  
+- Delete a content creator  
+- Visit a creator’s external link  
+- Styled using basic CSS (customize as needed)
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React  
+- React Router  
+- Supabase (PostgreSQL backend)  
+- JSX + CSS
+
+
+## ⚙️ Setup
+
+1. Clone the repo  
+   `git clone https://github.com/RobelK1738/MyCreatorverse.git`
+
+2. Install dependencies  
+   `npm install`
+
+3. Set up Supabase and update credentials in `client.js`
+
+4. Start the dev server  
+   `npm run dev`
+
+## 🧠 Notes
+
+- Ensure your Supabase table is named `creators` with fields: `id`, `name`, `url`, `description`, `imageURL`.
+- Make sure your `App.jsx` is wrapped in `<BrowserRouter>` in `main.jsx`.
+
+## 📜 License
+
+MIT License
