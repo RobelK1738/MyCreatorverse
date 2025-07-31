@@ -1,16 +1,15 @@
-import { useState, useEffect } from "react";
-import { supabase } from "../../client";
+import { useState, useEffect } from 'react';
+import { supabase } from '../../client';
 
-import { Link } from "react-router-dom";
-import ContentCreatorCard from "../ContentCreatorCard";
-
+import { Link } from 'react-router-dom';
+import ContentCreatorCard from '../ContentCreatorCard';
 
 export default function ShowCreators() {
   const [creators, setCreators] = useState([]);
 
   useEffect(() => {
     const fetchCreators = async () => {
-      const { data, error } = await supabase.from("creators").select();
+      const { data, _error } = await supabase.from('creators').select();
       if (data) setCreators(data);
     };
     fetchCreators();

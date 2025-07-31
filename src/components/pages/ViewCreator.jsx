@@ -1,6 +1,6 @@
-import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { supabase } from "../../client";
+import { useParams, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { supabase } from '../../client';
 
 export default function ViewCreator() {
   const { id } = useParams();
@@ -8,7 +8,11 @@ export default function ViewCreator() {
 
   useEffect(() => {
     const fetchCreator = async () => {
-      const { data, error } = await supabase.from("creators").select().eq("id", id).single();
+      const { data, _error } = await supabase
+        .from('creators')
+        .select()
+        .eq('id', id)
+        .single();
       if (data) setCreator(data);
     };
     fetchCreator();

@@ -4,21 +4,20 @@ Creatorverse is a React + Supabase web app that lets users manage a collection o
 
 ## 🚀 Features
 
-- View all content creators  
-- View details for a single creator  
-- Add a new content creator  
-- Edit existing creator info  
-- Delete a content creator  
-- Visit a creator’s external link  
+- View all content creators
+- View details for a single creator
+- Add a new content creator
+- Edit existing creator info
+- Delete a content creator
+- Visit a creator’s external link
 - Styled using basic CSS (customize as needed)
 
 ## 🛠️ Tech Stack
 
-- React  
-- React Router  
-- Supabase (PostgreSQL backend)  
+- React
+- React Router
+- Supabase (PostgreSQL backend)
 - JSX + CSS
-
 
 ## ⚙️ Setup
 
