@@ -7,19 +7,42 @@ import {
   DialogTitle,
 } from '@headlessui/react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from 'src/client';
 
-export default function DeleteCreator() {
-  const [open, setOpen] = useState(true);
+export default function DeleteCreator({ creatorId }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleDelete = async () => {
+    try {
+      const { error } = await supabase
+        .from('creators')
+        .delete()
+        .eq('id', creatorId);
+
+      if (error) throw error;
+      setIsOpen(false);
+      window.location.reload();
+      navigate(`/creators`);
+    } catch (error) {
+      console.error('Error deleting creator:', error);
+    }
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div>
       <button
-        onClick={() => setOpen(true)}
-        className="rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10"
+        onClick={() => setIsOpen(true)}
+        className="flex-1 text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200"
       >
         Delete
       </button>
-      <Dialog open={open} onClose={setOpen} className="relative z-10">
+      <Dialog open={isOpen} onClose={handleClose} className="relative z-10">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
@@ -52,7 +75,7 @@ export default function DeleteCreator() {
               <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button
                   type="button"
-                  onClick={() => setOpen(!open)}
+                  onClick={handleDelete}
                   className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto"
                 >
                   Delete
@@ -60,8 +83,8 @@ export default function DeleteCreator() {
                 <button
                   type="button"
                   data-autofocus
-                  onClick={() => setOpen(!open)}
-                  className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                  onClick={handleClose}
+                  className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto"
                 >
                   Cancel
                 </button>

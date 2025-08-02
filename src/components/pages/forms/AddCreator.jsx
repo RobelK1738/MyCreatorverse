@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { supabase } from '../../../client';
 import { useNavigate } from 'react-router-dom';
-import { UserCircleIcon } from '@heroicons/react/24/solid';
+import { UserCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 export default function AddCreator() {
   const [form, setForm] = useState({
@@ -22,7 +22,13 @@ export default function AddCreator() {
   };
 
   return (
-    <div className="flex min-h-screen bg-black min-w-screen items-center justify-center">
+    <div className="flex min-h-screen bg-black min-w-screen items-center justify-center relative">
+      <button
+        onClick={() => navigate(-1)}
+        className="absolute left-8 top-8 p-3 rounded-full bg-white hover:bg-indigo-100 shadow-lg hover:shadow-xl transition-all duration-200 group"
+      >
+        <ArrowLeftIcon className="h-7 w-7 text-indigo-600 group-hover:text-indigo-700" />
+      </button>
       <form
         onSubmit={handleSubmit}
         className="px-4 py-8 bg-black shadow sm:rounded-lg max-w-2xl w-full"
@@ -126,7 +132,7 @@ export default function AddCreator() {
         <div className="mt-6 flex items-center justify-end gap-x-6">
           <button
             type="button"
-            onClick={() => navigate('/creators')}
+            onClick={() => navigate('/')}
             className="text-sm/6 font-semibold text-white"
           >
             Cancel
