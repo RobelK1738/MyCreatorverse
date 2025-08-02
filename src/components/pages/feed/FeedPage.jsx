@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from 'src/client';
 import CreatorCard from './CreatorCard';
 
-export default function AllCreators() {
+export default function FeedPage() {
   const [creators, setCreators] = useState([]);
 
   useEffect(() => {
