@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { supabase } from '../../client';
+import { supabase } from '../../../client';
 import { useNavigate } from 'react-router-dom';
 
 export default function AddCreator() {
@@ -17,7 +17,7 @@ export default function AddCreator() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await supabase.from('creators').insert([form]);
-    navigate('/');
+    navigate('/creators');
   };
 
   return (

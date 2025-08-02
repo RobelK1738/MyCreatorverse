@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { supabase } from '../../client';
+import { supabase } from 'src/client';
 
 export default function EditCreator() {
   const { id } = useParams();
@@ -33,26 +33,20 @@ export default function EditCreator() {
     navigate(`/creators/${id}`);
   };
 
-  const handleDelete = async () => {
-    await supabase.from('creators').delete().eq('id', id);
-    navigate('/');
-  };
-
   return (
-    <form onSubmit={handleUpdate}>
-      <input name="name" value={form.name} onChange={handleChange} required />
-      <input name="url" value={form.url} onChange={handleChange} required />
-      <input name="imageURL" value={form.imageURL} onChange={handleChange} />
-      <textarea
-        name="description"
-        value={form.description}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Update Creator</button>
-      <button type="button" onClick={handleDelete}>
-        Delete Creator
-      </button>
-    </form>
+    <>
+      <form onSubmit={handleUpdate}>
+        <input name="name" value={form.name} onChange={handleChange} required />
+        <input name="url" value={form.url} onChange={handleChange} required />
+        <input name="imageURL" value={form.imageURL} onChange={handleChange} />
+        <textarea
+          name="description"
+          value={form.description}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Update Creator</button>
+      </form>
+    </>
   );
 }

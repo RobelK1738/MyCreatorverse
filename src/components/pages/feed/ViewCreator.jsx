@@ -1,6 +1,7 @@
-import { useParams, Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { supabase } from '../../client';
+import { supabase } from 'src/client';
+import DeleteCreator from '../forms/DeleteCreator';
 
 export default function ViewCreator() {
   const { id } = useParams();
@@ -28,6 +29,7 @@ export default function ViewCreator() {
       <a href={creator.url}>Visit Channel</a>
       <br />
       <Link to={`/creators/${creator.id}/edit`}>Edit</Link>
+      <DeleteCreator />
     </div>
   );
 }

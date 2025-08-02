@@ -1,12 +1,14 @@
-import ShowCreators from '../../MyCreatorverse/src/components/pages/ShowCreators';
-import AddCreator from '../../MyCreatorverse/src/components/pages/AddCreator';
-import ViewCreator from '../../MyCreatorverse/src/components/pages/ViewCreator';
-import EditCreator from '../../MyCreatorverse/src/components/pages/EditCreator';
+import AllCreators from 'components/pages/feed/AllCreators';
+import ViewCreator from 'components/pages/feed/ViewCreator';
+import AddCreator from 'components/pages/forms/AddCreator';
+import EditCreator from 'components/pages/forms/EditCreator';
+import HomePage from 'components/pages/home/HomePage';
 import { useRoutes } from 'react-router-dom';
 
 function App() {
   let routes = useRoutes([
-    { path: '/', element: <ShowCreators /> },
+    { path: '/', element: <HomePage /> },
+    { path: '/creators', element: <AllCreators /> },
     { path: '/creators/new', element: <AddCreator /> },
     { path: '/creators/:id', element: <ViewCreator /> },
     { path: '/creators/:id/edit', element: <EditCreator /> },
