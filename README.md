@@ -1,42 +1,68 @@
-# 💫 My Creatorverse
+# WEB103 Prework - _Creatorverse_
 
-Creatorverse is a React + Supabase web app that lets users manage a collection of content creators. Users can add, view, edit, and delete creators, as well as visit their external channels or pages.
+Submitted by: **Robel Kurte**
 
-## 🚀 Features
+About this web app: **Creatorverse is a dynamic web application that allows users to discover and manage their favorite content creators. Users can add new creators, view their details, edit their information, and remove them from their collection. The app features a modern, responsive interface with a card-based layout and intuitive navigation.**
 
-- View all content creators
-- View details for a single creator
-- Add a new content creator
-- Edit existing creator info
-- Delete a content creator
-- Visit a creator’s external link
-- Styled using basic CSS (customize as needed)
+Time spent: **12** hours
 
-## 🛠️ Tech Stack
+## Required Features
 
-- React
-- React Router
-- Supabase (PostgreSQL backend)
-- JSX + CSS
+The following **required** functionality is completed:
 
-## ⚙️ Setup
+- [x] **A logical component structure in React is used to create the frontend of the app**
+- [x] **At least five content creators are displayed on the homepage of the app**
+- [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
+- [x] **API calls use the async/await design pattern via Supabase client**
+- [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
+- [x] **Each content creator has their own unique URL**
+- [x] **The user can edit a content creator to change their name, url, or description**
+- [x] **The user can delete a content creator**
+- [x] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
-1. Clone the repo  
-   `git clone https://github.com/RobelK1738/MyCreatorverse.git`
+The following **optional** features are implemented:
 
-2. Install dependencies  
-   `npm install`
+- [ ] Picocss is used to style HTML elements
+- [x] The content creator items are displayed in a creative format, like cards instead of a list
+- [x] An image of each content creator is shown on their content creator card
 
-3. Set up Supabase and update credentials in `client.js`
+The following **additional** features are implemented:
 
-4. Start the dev server  
-   `npm run dev`
+- [x] Back navigation buttons for improved user experience
+- [x] Tailwind CSS is used to style HTML elements
+- [x] Form validation for required fields
+- [x] Smooth transitions and hover effects
+- [x] Error handling for database operations
+- [x] External links open in new tabs with security attributes
+- [x] The content creator items are displayed in a creative card format with hover effects
+- [x] An image of each content creator is shown on their content creator card
+- [x] Confirmation modal for delete actions
+- [x] Responsive design that works on both desktop and mobile
 
-## 🧠 Notes
+## Video Walkthrough
 
-- Ensure your Supabase table is named `creators` with fields: `id`, `name`, `url`, `description`, `imageURL`.
-- Make sure your `App.jsx` is wrapped in `<BrowserRouter>` in `main.jsx`.
+Here's a walkthrough of implemented required features:
 
-## 📜 License
+![Video Walkthrough](https://www.loom.com/share/081d30cbcf20464fa12c840fc54bb018?sid=23010242-75b3-44b2-8312-7b8a6391648b)
 
-MIT License
+GIF created with Kap
+
+## Notes
+
+Challenges encountered:
+
+- Implementing proper state management for real-time updates after CRUD operations
+- Creating a responsive design that works well on all screen sizes
+- Handling image URLs and validation
+- Setting up proper routing with dynamic paths
+- Implementing proper error handling for database operations
+
+## License
+
+Copyright [2025] [Robel Kurte]
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
