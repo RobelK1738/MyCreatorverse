@@ -1,4 +1,4 @@
-# 💫 Creatorverse
+# 💫 My Creatorverse
 
 Creatorverse is a React + Supabase web app that lets users manage a collection of content creators. Users can add, view, edit, and delete creators, as well as visit their external channels or pages.
 
