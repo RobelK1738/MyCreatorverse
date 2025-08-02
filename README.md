@@ -43,7 +43,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Video Walkthrough](https://www.loom.com/share/081d30cbcf20464fa12c840fc54bb018?sid=23010242-75b3-44b2-8312-7b8a6391648b)
+[Video Walkthrough](https://www.loom.com/share/081d30cbcf20464fa12c840fc54bb018?sid=23010242-75b3-44b2-8312-7b8a6391648b)
 
 GIF created with Kap
 
