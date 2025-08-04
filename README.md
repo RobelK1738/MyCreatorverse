@@ -1,8 +1,8 @@
-# WEB103 Prework - _Creatorverse_
+# WEB103 Prework - MyCreatorverse
 
-Submitted by: **Robel Kurte**
+Submitted by: **Robel Kebede**
 
-About this web app: **Creatorverse is a dynamic web application that allows users to discover and manage their favorite content creators. Users can add new creators, view their details, edit their information, and remove them from their collection. The app features a modern, responsive interface with a card-based layout and intuitive navigation.**
+About this web app: **MyCreatorverse is a dynamic web application that allows users to discover and manage their favorite content creators. Users can add new creators, view their details, edit their information, and remove them from their collection. The app features a modern, responsive interface with a card-based layout and intuitive navigation.**
 
 Time spent: **12** hours
 
@@ -45,7 +45,7 @@ Here's a walkthrough of implemented required features:
 
 [Video Walkthrough](https://www.loom.com/share/081d30cbcf20464fa12c840fc54bb018?sid=23010242-75b3-44b2-8312-7b8a6391648b)
 
-GIF created with Kap
+Video created with Loom
 
 ## Notes
 
@@ -53,13 +53,10 @@ Challenges encountered:
 
 - Implementing proper state management for real-time updates after CRUD operations
 - Creating a responsive design that works well on all screen sizes
-- Handling image URLs and validation
-- Setting up proper routing with dynamic paths
-- Implementing proper error handling for database operations
 
 ## License
 
-Copyright [2025] [Robel Kurte]
+Copyright [2025] [Robel Kebede]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
