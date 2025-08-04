@@ -2,7 +2,7 @@
 
 Submitted by: **Robel Kebede**
 
-About this web app: **MyCreatorverse is a dynamic web application that allows users to discover and manage their favorite content creators. Users can add new creators, view their details, edit their information, and remove them from their collection. The app features a modern, responsive interface with a card-based layout and intuitive navigation.**
+About this web app: **MyCreatorverse is a dynamic web app that allows users to discover and manage their favorite content creators. Users can add new creators, view their details, edit their information, and remove them from their collection. The app features a modern, responsive interface with a card-based layout and intuitive navigation.**
 
 Time spent: **12** hours
 
