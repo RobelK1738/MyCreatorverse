@@ -14,6 +14,9 @@ function App() {
     { path: '/creators/:id/edit', element: <EditCreator /> },
   ]);
 
+
+
+  
   return (
     <div className="flex min-h-screen min-w-screen items-center justify-center">
       {routes}
